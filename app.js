@@ -12,6 +12,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 // [SH] Require Passport
+// Now Passport just needs to be added to the application. So in app.js we need
+// to require the Passport module, require the Passport config and initialise
+// Passport as middleware. The placement of all of these items inside app.js is
+// quite important, as they need fit into a certain sequence.
+// The Passport module should be required at the top of the file with the other
+// general require statements.
 var passport = require('passport');
 
 // [SH] Bring in the data model
